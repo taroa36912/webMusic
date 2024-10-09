@@ -1,0 +1,77 @@
+css
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    margin: 0;
+}
+
+h2 {
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+.music-genre {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+}
+
+.music-item {
+    margin: 10px;
+    text-align: center;
+}
+
+.music-item a {
+    color: #000;
+    text-decoration: none;
+}
+
+.music-icon {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+}
+
+.music-detail {
+    text-align: center;
+    padding: 20px;
+}
+
+.music-detail-icon {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+}
+
+.music-info {
+    margin-top: 20px;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+a button {
+    text-decoration: none;
+    color: #000;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-size: 18px;
+}
