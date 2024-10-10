@@ -1,77 +1,62 @@
-css
+/* ベーススタイル */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     padding: 0;
+    color: #333;
+    background-color: #f6f6f6;
 }
 
-h1 {
+/* ヘッダー */
+header {
     background-color: #333;
     color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+/* メインコンテンツ */
+main {
     padding: 20px;
-    margin: 0;
+}
+
+section {
+    margin-bottom: 40px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
 }
 
 h2 {
-    background-color: #f0f0f0;
-    padding: 10px;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 18px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
 }
 
 .music-genre {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    padding: 10px;
 }
 
 .music-item {
-    margin: 10px;
+    margin: 0 20px;
     text-align: center;
-}
-
-.music-item a {
-    color: #000;
-    text-decoration: none;
 }
 
 .music-icon {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     object-fit: cover;
     border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
 }
 
-.music-detail {
-    text-align: center;
-    padding: 20px;
-}
-
-.music-detail-icon {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    border: 1px solid #ddd;
-}
-
-.music-info {
-    margin-top: 20px;
-}
-
-button {
-    margin: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
-}
-
-a button {
-    text-decoration: none;
-    color: #000;
-}
-
-a {
-    text-decoration: none;
-}
-
-p {
-    font-size: 18px;
+.music-item p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
 }
