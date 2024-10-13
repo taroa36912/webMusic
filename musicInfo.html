@@ -2,20 +2,21 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>曲名 - 詳細情報</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- ヘッダー -->
     <header>
-        <div><img src="images/logo.png"></div>
-        <div class="header-container"><h1>GAKIのミュージックスタジオ</h1></div>
+        <div class="header-container">
+            <img src="images/logo.png" alt="GAKIのミュージックスタジオ ロゴ">
+            <h1>GAKIのミュージックスタジオ</h1>
+        </div>
     </header>
 
-    <!-- メインコンテンツ -->
     <main>
-        <h1 id="music-title">曲名</h1>
+        <h2 id="music-title">曲名</h2>
         <div class="music-detail">
             <img id="music-image" src="" alt="" class="music-detail-icon">
             <div class="music-info">
@@ -23,7 +24,7 @@
                 <audio id="audio-player" src=""></audio>
                 <button id="play-button">再生</button>
                 <button id="pause-button">停止</button>
-                <br>
+                <br><br>
                 <a id="download-link" href="" download><button>ダウンロード</button></a>
             </div>
         </div>
