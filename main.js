@@ -25,34 +25,76 @@ const musicData = {
     }
 };
 
-(function() {
-    // URLからクエリパラメータを取得
+function populateMusicItems() {
+    const sleepMusicContainer = document.getElementById('sleep-music');
+    const workMusicContainer = document.getElementById('work-music');
+
+    for (const [id, music] of Object.entries(musicData)) {
+        const musicItem = document.createElement('div');
+        musicItem.className = 'music-item';
+        musicItem.innerHTML = `
+            <a href="musicInfo.html?id=${id}">
+                <img src="${music.image}" alt="${music.title}" class="music-icon">
+                <p>${music.title}</p>
+            </a>
+        `;
+
+        if (music.genre === '睡眠系音楽') {
+            sleepMusicContainer.appendChild(musicItem);
+        } else if (music.genre === '作業系音楽') {
+            workMusicContainer.appendChild(musicItem);
+        }
+    }
+}
+
+// 音楽情報ページの処理
+function setupMusicInfoPage() {
     const urlParams = new URLSearchParams(window.location.search);
     const musicId = urlParams.get('id');
 
-    // musicIdがmusicDataに存在するか確認
     if (musicId && musicData[musicId]) {
         const data = musicData[musicId];
-        // ページの要素を更新
         document.title = `${data.title} - 詳細情報`;
         document.getElementById('music-title').textContent = data.title;
         document.getElementById('music-image').src = data.image;
         document.getElementById('music-image').alt = data.title;
         document.getElementById('music-genre').textContent = data.genre;
-        document.getElementById('audio-player').src = data.audio;
+        
+        const audioPlayer = document.getElementById('audio-player');
+        audioPlayer.src = data.audio;
+        audioPlayer.loop = true;
+
+        const playButton = document.getElementById('play-button');
+        const pauseButton = document.getElementById('pause-button');
+
+        playButton.addEventListener('click', function() {
+            audioPlayer.play();
+            playButton.style.display = 'none';
+            pauseButton.style.display = 'inline-block';
+        });
+
+        pauseButton.addEventListener('click', function() {
+            audioPlayer.pause();
+            audioPlayer.currentTime = 0;
+            playButton.style.display = 'inline-block';
+            pauseButton.style.display = 'none';
+        });
+
+        // Initially hide the pause button
+        pauseButton.style.display = 'none';
+
         document.getElementById('download-link').href = data.audio;
-
-        // 再生ボタンと停止ボタンにイベントリスナーを追加
-        document.getElementById('play-button').addEventListener('click', function() {
-            document.getElementById('audio-player').play();
-        });
-
-        document.getElementById('pause-button').addEventListener('click', function() {
-            document.getElementById('audio-player').pause();
-        });
     } else {
-        // 無効なmusicIdの場合の処理
         alert('音楽が見つかりませんでした。');
         window.location.href = 'index.html';
     }
-})();
+}
+
+// ページ読み込み時の処理
+document.addEventListener('DOMContentLoaded', function() {
+    if (document.getElementById('sleep-music')) {
+        populateMusicItems();
+    } else if (document.getElementById('music-title')) {
+        setupMusicInfoPage();
+    }
+});
