@@ -1,153 +1,201 @@
 /* ベーススタイル */
 body {
-    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    background-color: #fff5e6;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #fff5e6;
+}
+
+/* ヘッダー */
+header {
+  background-color: #ff8c00;
+  color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 60px;
+  height: auto;
+  margin-right: 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* メインコンテンツ */
+.main-body {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.left-container, .right-container {
+  width: 20%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.music-container {
+  width: 60%;
+  padding: 0 20px;
+}
+
+section {
+  margin-bottom: 40px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+h2 {
+  color: #ff8c00;
+  margin-bottom: 20px;
+  font-size: 24px;
+  border-bottom: 2px solid #ffd700;
+  padding-bottom: 10px;
+}
+
+.music-genre {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.music-item {
+  flex: 0 0 calc(33.333% - 20px);
+  max-width: calc(33.333% - 20px);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.music-item:hover {
+  transform: translateY(-5px);
+}
+
+.music-icon {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.music-item p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #666;
+  font-weight: 500;
+}
+
+/* 音楽詳細ページ */
+.music-detail {
+  display: flex;
+  align-items: flex-start;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.music-detail-icon {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.music-info {
+  flex: 1;
+}
+
+.music-info p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #ff8c00;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
+}
+
+button:hover {
+  background-color: #ffa500;
+}
+
+#download-link button {
+  background-color: #4CAF50;
+}
+
+#download-link button:hover {
+  background-color: #45a049;
+}
+
+a {
+  color: #ff8c00;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.left-container img {
+  width: 40px;
+  height: 60px;
+}
+
+.right-container img {
+  width: 40px;
+  height: 60px;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+  .main-body {
+      flex-direction: column;
   }
-  
-  /* ヘッダー */
-  header {
-    background-color: #ff8c00;
-    color: #fff;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+  .left-container, .right-container, .music-container {
+      width: 100%;
+      margin-bottom: 20px;
   }
-  
-  .header-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  header img {
-    width: 60px;
-    height: auto;
-    margin-right: 20px;
-  }
-  
-  header h1 {
-    margin: 0;
-    font-size: 28px;
-    font-weight: 700;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-  }
-  
-  /* メインコンテンツ */
-  main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
-  }
-  
-  section {
-    margin-bottom: 40px;
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  }
-  
-  h2 {
-    color: #ff8c00;
-    margin-bottom: 20px;
-    font-size: 24px;
-    border-bottom: 2px solid #ffd700;
-    padding-bottom: 10px;
-  }
-  
-  .music-genre {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
+
   .music-item {
-    margin: 15px;
-    text-align: center;
-    transition: transform 0.3s ease;
+      flex: 0 0 calc(50% - 20px);
+      max-width: calc(50% - 20px);
   }
-  
-  .music-item:hover {
-    transform: translateY(-5px);
+}
+
+@media (max-width: 480px) {
+  .music-item {
+      flex: 0 0 100%;
+      max-width: 100%;
   }
-  
-  .music-icon {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  }
-  
-  .music-item p {
-    margin-top: 10px;
-    font-size: 16px;
-    color: #666;
-    font-weight: 500;
-  }
-  
-  /* 音楽詳細ページ */
-  .music-detail {
-    display: flex;
-    align-items: flex-start;
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  }
-  
-  .music-detail-icon {
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-right: 30px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  }
-  
-  .music-info {
-    flex: 1;
-  }
-  
-  .music-info p {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-  
-  button {
-    background-color: #ff8c00;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-right: 10px;
-  }
-  
-  button:hover {
-    background-color: #ffa500;
-  }
-  
-  #download-link button {
-    background-color: #4CAF50;
-  }
-  
-  #download-link button:hover {
-    background-color: #45a049;
-  }
-  
-  a {
-    color: #ff8c00;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
+}
