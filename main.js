@@ -3,49 +3,57 @@ const musicData = {
         title: '曲名1',
         genre: 'sleep-music',
         image: 'images/sleep1.jpg',
-        audio: 'musics/music1.mp3'
+        audio: 'musics/music1.mp3',
+        composer: 'gaki'
     },
     'music2': {
         title: '曲名2',
         genre: 'sleep-music',
         image: 'images/sleep2.jpg',
-        audio: 'musics/music2.mp3'
+        audio: 'musics/music2.mp3',
+        composer: 'gaki'
     },
     'music3': {
         title: '曲名3',
         genre: 'work-music',
         image: 'images/work1.jpg',
-        audio: 'musics/music3.mp3'
+        audio: 'musics/music3.mp3',
+        composer: 'gaki'
     },
     'music4': {
         title: '曲名4',
         genre: 'work-music',
         image: 'images/work2.jpg',
-        audio: 'musics/music4.mp3'
+        audio: 'musics/music4.mp3',
+        composer: 'gaki'
     },
     'music5': {
         title: '曲名4',
         genre: 'work-music',
         image: 'images/work2.jpg',
-        audio: 'musics/music4.mp3'
+        audio: 'musics/music4.mp3',
+        composer: 'gaki'
     },
     'music6': {
         title: '曲名4',
         genre: 'work-music',
         image: 'images/work2.jpg',
-        audio: 'musics/music4.mp3'
+        audio: 'musics/music4.mp3',
+        composer: 'gaki'
     },
     'music7': {
         title: '曲名4',
         genre: 'sleep-music',
         image: 'images/work2.jpg',
-        audio: 'musics/music4.mp3'
+        audio: 'musics/music4.mp3',
+        composer: 'gaki'
     },
     'music8': {
         title: '曲名4',
         genre: 'sleep-music',
         image: 'images/work2.jpg',
-        audio: 'musics/music4.mp3'
+        audio: 'musics/music4.mp3',
+        composer: 'gaki'
     },
 };
 
@@ -96,6 +104,7 @@ function setupMusicInfoPage() {
         document.getElementById('music-image').src = data.image;
         document.getElementById('music-image').alt = data.title;
         document.getElementById('music-genre').textContent = genreJpChanger[data.genre];
+        document.getElementById('music-composer').textContent = data.composer;
         
         const audioPlayer = document.getElementById('audio-player');
         audioPlayer.src = data.audio;
