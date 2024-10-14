@@ -1,65 +1,89 @@
 const musicData = {
     'music1': {
         title: '曲名1',
-        genre: 'sleep-music',
+        genre: 'sleep',
         image: 'images/sleep1.jpg',
         audio: 'musics/music1.mp3',
         composer: 'gaki'
     },
     'music2': {
         title: '曲名2',
-        genre: 'sleep-music',
+        genre: 'sleep',
         image: 'images/sleep2.jpg',
         audio: 'musics/music2.mp3',
         composer: 'gaki'
     },
     'music3': {
         title: '曲名3',
-        genre: 'work-music',
+        genre: 'work',
         image: 'images/work1.jpg',
         audio: 'musics/music3.mp3',
         composer: 'gaki'
     },
     'music4': {
         title: '曲名4',
-        genre: 'work-music',
+        genre: 'work',
         image: 'images/work2.jpg',
         audio: 'musics/music4.mp3',
         composer: 'gaki'
     },
     'music5': {
         title: '曲名4',
-        genre: 'work-music',
+        genre: 'work',
         image: 'images/work2.jpg',
         audio: 'musics/music4.mp3',
         composer: 'gaki'
     },
     'music6': {
         title: '曲名4',
-        genre: 'work-music',
+        genre: 'work',
         image: 'images/work2.jpg',
         audio: 'musics/music4.mp3',
         composer: 'gaki'
     },
     'music7': {
         title: '曲名4',
-        genre: 'sleep-music',
+        genre: 'sleep',
         image: 'images/work2.jpg',
         audio: 'musics/music4.mp3',
         composer: 'gaki'
     },
     'music8': {
         title: '曲名4',
-        genre: 'sleep-music',
+        genre: 'sleep',
         image: 'images/work2.jpg',
         audio: 'musics/music4.mp3',
         composer: 'gaki'
     },
+    'cat': {
+        title: '猫',
+        genre: 'daily',
+        image: 'images/work2.jpg',
+        audio: 'musics/cat.mp3',
+        composer: 'gaki'
+    },
+    'silence': {
+        title: '嵐の前の静けさ',
+        genre: 'daily',
+        image: 'images/work2.jpg',
+        audio: 'musics/silence_before_storm.mp3',
+        composer: 'gaki'
+    },
+    'carnival': {
+        title: 'カーニバル',
+        genre: 'festival',
+        image: 'images/work2.jpg',
+        audio: 'musics/carnival.mp3',
+        composer: 'gaki'
+    },
+
 };
 
 const genreJpChanger = {
-    'sleep-music' : '睡眠系音楽',
-    'work-music' : '作業系音楽'
+    'sleep' : '睡眠系音楽',
+    'work' : '作業系音楽',
+    'daily' : '日常系音楽',
+    'festival' : '祭り系音楽'
 };
 
 function createGenreSections() {
