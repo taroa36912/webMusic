@@ -1,58 +1,9 @@
 const musicData = {
-    'music1': {
-        title: '曲名1',
+    'angrysilently': {
+        title: '静かなる怒り',
         genre: 'sleep',
         image: 'images/sleep1.jpg',
         audio: 'musics/music1.mp3',
-        composer: 'gaki'
-    },
-    'music2': {
-        title: '曲名2',
-        genre: 'sleep',
-        image: 'images/sleep2.jpg',
-        audio: 'musics/music2.mp3',
-        composer: 'gaki'
-    },
-    'music3': {
-        title: '曲名3',
-        genre: 'work',
-        image: 'images/work1.jpg',
-        audio: 'musics/music3.mp3',
-        composer: 'gaki'
-    },
-    'music4': {
-        title: '曲名4',
-        genre: 'work',
-        image: 'images/work2.jpg',
-        audio: 'musics/music4.mp3',
-        composer: 'gaki'
-    },
-    'music5': {
-        title: '曲名4',
-        genre: 'work',
-        image: 'images/work2.jpg',
-        audio: 'musics/music4.mp3',
-        composer: 'gaki'
-    },
-    'music6': {
-        title: '曲名4',
-        genre: 'work',
-        image: 'images/work2.jpg',
-        audio: 'musics/music4.mp3',
-        composer: 'gaki'
-    },
-    'music7': {
-        title: '曲名4',
-        genre: 'sleep',
-        image: 'images/work2.jpg',
-        audio: 'musics/music4.mp3',
-        composer: 'gaki'
-    },
-    'music8': {
-        title: '曲名4',
-        genre: 'sleep',
-        image: 'images/work2.jpg',
-        audio: 'musics/music4.mp3',
         composer: 'gaki'
     },
     'cat': {
@@ -76,6 +27,20 @@ const musicData = {
         audio: 'musics/carnival.mp3',
         composer: 'gaki'
     },
+    'hiphop1': {
+        title: 'ヒップホップ１',
+        genre: 'hiphop',
+        image: 'images/work2.jpg',
+        audio: 'musics/hiphop.mp3',
+        composer: 'gaki'
+    },
+    'positive_spinning': {
+        title: 'ポジティブ空回り',
+        genre: 'daily',
+        image: 'images/work2.jpg',
+        audio: 'musics/positive_spinning.mp3',
+        composer: 'gaki'
+    },
 
 };
 
@@ -83,7 +48,8 @@ const genreJpChanger = {
     'sleep' : '睡眠系音楽',
     'work' : '作業系音楽',
     'daily' : '日常系音楽',
-    'festival' : '祭り系音楽'
+    'festival' : '祭り系音楽',
+    'hiphop' : 'ヒップホップ'
 };
 
 function createGenreSections() {
