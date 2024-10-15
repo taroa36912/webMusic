@@ -1,57 +1,55 @@
 const musicData = {
-    'music1': {
-        title: '曲名1',
-        genre: 'sleep-music',
+    'angrysilently': {
+        title: '静かなる怒り',
+        genre: 'sleep',
         image: 'images/sleep1.jpg',
-        audio: 'musics/music1.mp3'
+        audio: 'musics/music1.mp3',
+        composer: 'gaki'
     },
-    'music2': {
-        title: '曲名2',
-        genre: 'sleep-music',
-        image: 'images/sleep2.jpg',
-        audio: 'musics/music2.mp3'
-    },
-    'music3': {
-        title: '曲名3',
-        genre: 'work-music',
-        image: 'images/work1.jpg',
-        audio: 'musics/music3.mp3'
-    },
-    'music4': {
-        title: '曲名4',
-        genre: 'work-music',
+    'cat': {
+        title: '猫',
+        genre: 'daily',
         image: 'images/work2.jpg',
-        audio: 'musics/music4.mp3'
+        audio: 'musics/cat.mp3',
+        composer: 'gaki'
     },
-    'music5': {
-        title: '曲名4',
-        genre: 'work-music',
+    'silence': {
+        title: '嵐の前の静けさ',
+        genre: 'daily',
         image: 'images/work2.jpg',
-        audio: 'musics/music4.mp3'
+        audio: 'musics/silence_before_storm.mp3',
+        composer: 'gaki'
     },
-    'music6': {
-        title: '曲名4',
-        genre: 'work-music',
+    'carnival': {
+        title: 'カーニバル',
+        genre: 'festival',
         image: 'images/work2.jpg',
-        audio: 'musics/music4.mp3'
+        audio: 'musics/carnival.mp3',
+        composer: 'gaki'
     },
-    'music7': {
-        title: '曲名4',
-        genre: 'sleep-music',
+    'hiphop1': {
+        title: 'ヒップホップ１',
+        genre: 'hiphop',
         image: 'images/work2.jpg',
-        audio: 'musics/music4.mp3'
+        audio: 'musics/hiphop.mp3',
+        composer: 'gaki'
     },
-    'music8': {
-        title: '曲名4',
-        genre: 'sleep-music',
+    'positive_spinning': {
+        title: 'ポジティブ空回り',
+        genre: 'daily',
         image: 'images/work2.jpg',
-        audio: 'musics/music4.mp3'
+        audio: 'musics/positive_spinning.mp3',
+        composer: 'gaki'
     },
+
 };
 
 const genreJpChanger = {
-    'sleep-music' : '睡眠系音楽',
-    'work-music' : '作業系音楽'
+    'sleep' : '睡眠系音楽',
+    'work' : '作業系音楽',
+    'daily' : '日常系音楽',
+    'festival' : '祭り系音楽',
+    'hiphop' : 'ヒップホップ'
 };
 
 function createGenreSections() {
@@ -96,6 +94,7 @@ function setupMusicInfoPage() {
         document.getElementById('music-image').src = data.image;
         document.getElementById('music-image').alt = data.title;
         document.getElementById('music-genre').textContent = genreJpChanger[data.genre];
+        document.getElementById('music-composer').textContent = data.composer;
         
         const audioPlayer = document.getElementById('audio-player');
         audioPlayer.src = data.audio;
