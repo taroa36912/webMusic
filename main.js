@@ -4,42 +4,42 @@ const musicData = {
         genre: 'sleep',
         image: 'images/sleep1.jpg',
         audio: 'musics/music1.mp3',
-        composer: 'gaki'
+        composer: 'Z'
     },
     'cat': {
         title: '猫',
         genre: 'daily',
         image: 'images/work2.jpg',
         audio: 'musics/cat.mp3',
-        composer: 'gaki'
+        composer: 'Z'
     },
     'silence': {
         title: '嵐の前の静けさ',
         genre: 'daily',
         image: 'images/work2.jpg',
         audio: 'musics/silence_before_storm.mp3',
-        composer: 'gaki'
+        composer: 'Z'
     },
     'carnival': {
         title: 'カーニバル',
         genre: 'festival',
         image: 'images/work2.jpg',
         audio: 'musics/carnival.mp3',
-        composer: 'gaki'
+        composer: 'Z'
     },
     'hiphop1': {
         title: 'ヒップホップ１',
         genre: 'hiphop',
         image: 'images/work2.jpg',
         audio: 'musics/hiphop.mp3',
-        composer: 'gaki'
+        composer: 'Z'
     },
     'positive_spinning': {
         title: 'ポジティブ空回り',
         genre: 'daily',
         image: 'images/work2.jpg',
         audio: 'musics/positive_spinning.mp3',
-        composer: 'gaki'
+        composer: 'Z'
     },
 
 };
@@ -134,4 +134,74 @@ document.addEventListener('DOMContentLoaded', function() {
     } else if (document.getElementById('music-title')) {
         setupMusicInfoPage();
     }
+});
+
+// 広告の処理
+const playButton = document.getElementById('play-button');
+const pauseButton = document.getElementById('pause-button');
+const downloadButton = document.querySelector('#download-link button');
+const adOverlay = document.getElementById('ad-overlay');
+const skipButton = document.getElementById('skip-button');
+const timer = document.getElementById('timer');
+const audioPlayer = document.getElementById('audio-player');
+
+let isAdDisplayed = false;
+
+function showAd() {
+    if (Math.random() < 0.3) { // 30% chance to show ad
+        isAdDisplayed = true;
+        adOverlay.style.display = 'flex';
+        let timeLeft = 5;
+        const timerInterval = setInterval(() => {
+            timeLeft--;
+            timer.textContent = timeLeft;
+            if (timeLeft === 0) {
+                clearInterval(timerInterval);
+                skipButton.style.display = 'block';
+            }
+        }, 1000);
+        return true;
+    }
+    return false;
+}
+
+function hideAd() {
+    adOverlay.style.display = 'none';
+    skipButton.style.display = 'none';
+    timer.textContent = '5';
+    isAdDisplayed = false;
+}
+
+playButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (!isAdDisplayed) {
+        if (!showAd()) {
+            audioPlayer.play();
+        }
+    }
+});
+
+pauseButton.addEventListener('click', () => {
+    audioPlayer.pause();
+});
+
+downloadButton.addEventListener('click', (e) => {
+    if (showAd()) {
+        e.preventDefault();
+    }
+});
+
+skipButton.addEventListener('click', () => {
+    hideAd();
+    audioPlayer.play();
+});
+
+audioPlayer.addEventListener('play', () => {
+    playButton.disabled = true;
+    pauseButton.disabled = false;
+});
+
+audioPlayer.addEventListener('pause', () => {
+    playButton.disabled = false;
+    pauseButton.disabled = true;
 });
