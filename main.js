@@ -1,43 +1,29 @@
 const musicData = {
-    'angrysilently': {
-        title: '静かなる怒り',
-        genre: 'sleep',
-        image: 'images/sleep1.jpg',
-        audio: 'musics/music1.mp3',
-        composer: 'Z'
-    },
     'cat': {
-        title: '猫',
+        title: '子猫のワルツ',
         genre: 'daily',
-        image: 'images/work2.jpg',
+        image: 'images/cat.jpeg',
         audio: 'musics/cat.mp3',
         composer: 'Z'
     },
     'silence': {
         title: '嵐の前の静けさ',
         genre: 'daily',
-        image: 'images/work2.jpg',
+        image: 'images/storm.jpeg',
         audio: 'musics/silence_before_storm.mp3',
         composer: 'Z'
     },
     'carnival': {
         title: 'カーニバル',
         genre: 'festival',
-        image: 'images/work2.jpg',
+        image: 'images/carnival.jpeg',
         audio: 'musics/carnival.mp3',
-        composer: 'Z'
-    },
-    'hiphop1': {
-        title: 'ヒップホップ１',
-        genre: 'hiphop',
-        image: 'images/work2.jpg',
-        audio: 'musics/hiphop.mp3',
         composer: 'Z'
     },
     'positive_spinning': {
         title: 'ポジティブ空回り',
         genre: 'daily',
-        image: 'images/work2.jpg',
+        image: 'images/positive.jpeg',
         audio: 'musics/positive_spinning.mp3',
         composer: 'Z'
     },
@@ -45,8 +31,6 @@ const musicData = {
 };
 
 const genreJpChanger = {
-    'sleep' : '睡眠系音楽',
-    'work' : '作業系音楽',
     'daily' : '日常系音楽',
     'festival' : '祭り系音楽',
     'hiphop' : 'ヒップホップ'
