@@ -15,6 +15,20 @@ header {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+iframe {
+  border: none;
+  width: 100%;
+}
+#header-frame {
+  height: 90px;
+}
+#left-menu-frame, #right-menu-frame {
+  height: calc(100vh - 160px);
+}
+#footer-frame {
+  height: 205px;
+}
+
 .header-link {
   display: block;
   color: #fff;
@@ -236,6 +250,68 @@ a:hover {
   width: 40px;
   height: 60px;
   margin-bottom: 10px;
+}
+
+/* フッター */
+footer {
+  background-color: #ff8c00;
+  color: #fff;
+  padding: 40px 0;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo-img {
+  width: 80px;
+  height: auto;
+}
+
+.footer-menu ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.footer-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-menu a:hover {
+  color: #ffd700;
+}
+
+.footer-copyright {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .footer-menu ul {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .footer-logo, .footer-menu, .footer-copyright {
+      margin-bottom: 20px;
+  }
 }
 
 /* レスポンシブデザイン */
