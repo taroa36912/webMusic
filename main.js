@@ -27,13 +27,21 @@ const musicData = {
         audio: 'musics/positive_spinning.mp3',
         composer: 'Z'
     },
+    'stutter_techno': {
+        title: 'stutter techno',
+        genre: 'techno',
+        image: 'images/Stutter_Techno.jpg',
+        audio: 'musics/Stutter_Techno.mp3',
+        composer: 'Torugo'
+    },
 
 };
 
 const genreJpChanger = {
     'daily' : '日常系音楽',
     'festival' : '祭り系音楽',
-    'hiphop' : 'ヒップホップ'
+    'hiphop' : 'ヒップホップ',
+    'techno' : 'テクノ'
 };
 
 function createGenreSections() {
