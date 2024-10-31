@@ -30,15 +30,15 @@ const musicData = {
     'stutter_techno': {
         title: 'stutter techno',
         genre: 'techno',
-        image: 'images/spectrum-flashes-coloured-light.jpg',
-        audio: 'musics/dubstep.mp3',
+        image: 'images/Stutter_Techno.jpg',
+        audio: 'musics/Stutter_Techno.mp3',
         composer: 'Torugo'
     },
     'savior' : {
         title: 'Savior',
         genre: 'dubstep',
-        image: 'images/Savior.jpg',
-        audio: 'musics/Savior.mp3',
+        image: 'images/spectrum.jpg',
+        audio: 'musics/dubstep.mp3',
         composer: 'Torugo'
     }
 
