@@ -30,10 +30,17 @@ const musicData = {
     'stutter_techno': {
         title: 'stutter techno',
         genre: 'techno',
-        image: 'images/Stutter_Techno.jpg',
-        audio: 'musics/Stutter_Techno.mp3',
+        image: 'images/spectrum-flashes-coloured-light.jpg',
+        audio: 'musics/dubstep.mp3',
         composer: 'Torugo'
     },
+    'savior' : {
+        title: 'Savior',
+        genre: 'dubstep',
+        image: 'images/Savior.jpg',
+        audio: 'musics/Savior.mp3',
+        composer: 'Torugo'
+    }
 
 };
 
@@ -41,7 +48,8 @@ const genreJpChanger = {
     'daily' : '日常系音楽',
     'festival' : '祭り系音楽',
     'hiphop' : 'ヒップホップ',
-    'techno' : 'テクノ'
+    'techno' : 'テクノ',
+    'dubstep' : 'ダブステップ'
 };
 
 function createGenreSections() {
